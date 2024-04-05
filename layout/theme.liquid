@@ -56,7 +56,7 @@
 
   {{ 'app.css' | asset_url | stylesheet_tag }}
 
-{% render 'gp-head' %}
+{% comment %}{% render 'gp-head' %}{% endcomment %}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
