@@ -1,3 +1,26 @@
+<html>
+
+<head>
+  {{ content_for_header }}
+</head>
+
+<body class="demo-{{ template.name }}">
+
+  {%- if settings.cart_type == 'drawer' -%}
+  {%- render 'cart-drawer' -%}
+  {%- endif -%}
+  {% sections 'header-group' %}
+  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+  {% sections 'footer-group' %}
+
+  {{ content_for_layout }}
+</body>
+
+</html>
+
+{% comment %}
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
 <head>
@@ -76,3 +99,4 @@
 
 </body>
 </html>
+{% endcomment %}
