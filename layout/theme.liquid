@@ -1,30 +1,8 @@
-<html>
-
-<head>
-  {{ content_for_header }}
-</head>
-
-<body class="demo-{{ template.name }}">
-
-  {%- if settings.cart_type == 'drawer' -%}
-  {%- render 'cart-drawer' -%}
-  {%- endif -%}
-  {% sections 'header-group' %}
-  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-    {{ content_for_layout }}
-  </main>
-  {% sections 'footer-group' %}
-
-  {{ content_for_layout }}
-</body>
-
-</html>
-
-{% comment %}
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
 <head>
-  <meta charset="utf-8">
+  {{ content_for_header }}
+  {% comment %}<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% comment %} <meta name="viewport" content="width=device-width,initial-scale=1"> {% endcomment %}
   <meta name="theme-color" content="{{ settings.color_accent }}">
@@ -79,7 +57,7 @@
 
   {{ 'app.css' | asset_url | stylesheet_tag }}
 
-{% comment %}{% render 'gp-head' %}{% endcomment %}
+{% comment %}{% render 'gp-head' %}{% endcomment %}{% endcomment %}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -99,4 +77,3 @@
 
 </body>
 </html>
-{% endcomment %}
