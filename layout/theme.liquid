@@ -2,7 +2,7 @@
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
 <head>
   {{ content_for_header }}
-  {% comment %}<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% comment %} <meta name="viewport" content="width=device-width,initial-scale=1"> {% endcomment %}
   <meta name="theme-color" content="{{ settings.color_accent }}">
@@ -57,7 +57,7 @@
 
   {{ 'app.css' | asset_url | stylesheet_tag }}
 
-{% comment %}{% render 'gp-head' %}{% endcomment %}{% endcomment %}
+{% render 'gp-head' %}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
