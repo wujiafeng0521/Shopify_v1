@@ -119,30 +119,71 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "sections": {
-      "main-password-header": {
-        "type": "main-password-header",
+      "header": {
+        "type": "header",
         "settings": {
-          "color_scheme": "background-1"
+          "announcement_bar_enabled": false,
+          "announcement_bar_home_page_only": true,
+          "announcement_bar_text": "Announce something here",
+          "announcement_bar_link": "",
+          "logo": "shopify:\/\/shop_images\/10421709910649_.pic.jpg",
+          "logo_max_width": 100,
+          "menu": "main-menu"
         }
       },
-      "main-password-footer": {
-        "type": "main-password-footer",
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
         "settings": {
-          "color_scheme": "background-1"
+          "color_scheme": "",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "enable_follow_on_shop": true,
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "show_policy": false,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 36
         }
       }
     },
-    "content_for_index": [],
+    "content_for_index": [
+
+    ],
     "blocks": {
       "8857984110089213392": {
         "type": "shopify:\/\/apps\/hextom-ultimate-sales-boost\/blocks\/usb-embeded-block\/00e81c42-8ae7-4b0b-b43d-99393b885fc4",
         "disabled": true,
-        "settings": {}
+        "settings": {
+        }
       },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": true,
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "color_schemes": {
@@ -388,24 +429,12 @@
       "cart_type": "notification",
       "show_vendor": false,
       "show_cart_note": false,
-      "cart_drawer_collection": "",
-      "sections": {
-        "main-password-header": {
-          "type": "main-password-header",
-          "settings": {
-            "color_scheme": "background-1"
-          }
-        },
-        "main-password-footer": {
-          "type": "main-password-footer",
-          "settings": {
-            "color_scheme": "background-1"
-          }
-        }
-      }
+      "cart_drawer_collection": ""
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+
+    ]
   }
 }
