@@ -1,0 +1,49 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "23e3f926-8352-4c4e-ab6f-deaecc85b5d0": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"shopify-section-trust-bar\" class=\"shopify-section\"><link rel=\"stylesheet\" href=\"\/\/www.skinnydiplondon.com\/cdn\/shop\/t\/550\/assets\/trust-bar.css?v=59381915057705628451692273890\" media=\"all\" onload=\"this.media='all'\">\n\n<section class=\"sec-Section\" aria-label=\"Trust bar\" id=\"trust-bar\" data-section-id=\"trust-bar\" data-section-type=\"trust-bar\">\n  <div class=\"sec-Section_Inner lyt-Container\">\n    <div class=\"sec-Section_Body\">\n      <div class=\"sec-Trust\">\n        <div class=\"sec-Trust_Items\"><div class=\"sec-Trust_Item\">\n              <div class=\"sec-Trust_Group\"><div class=\"sec-Trust_Image\"><div class=\"rsp-Image\" style=\"--Image_AspectRatio: 100.0%; --Aspect_Ratio: 88 \/ 88;\"><img src=\"\/\/www.skinnydiplondon.com\/cdn\/shop\/files\/trust-delivery.png?v=1692266704&amp;width=60\" width=\"60\" height=\"60\" loading=\"lazy\" sizes=\"(max-width: 767px) 88px, (min-width: 768px) 88px\" class=\"rsp-Image_Image\"><\/div>\n<\/div>\n\n                  <div class=\"sec-Trust_Content\"><p class=\"sec-Trust_Title fz-15_120-normal\">Free UK Delivery<\/p><p class=\"sec-Trust_Text fz-12_140\">Get free UK standard delivery with orders on or over £30<\/p><\/div><\/div>\n            <\/div><div class=\"sec-Trust_Item\">\n              <div class=\"sec-Trust_Group\"><div class=\"sec-Trust_Image\"><div class=\"rsp-Image\" style=\"--Image_AspectRatio: 100.0%; --Aspect_Ratio: 88 \/ 88;\"><img src=\"\/\/www.skinnydiplondon.com\/cdn\/shop\/files\/trust-student.png?v=1692266704&amp;width=60\" width=\"60\" height=\"60\" loading=\"lazy\" sizes=\"(max-width: 767px) 88px, (min-width: 768px) 88px\" class=\"rsp-Image_Image\"><\/div>\n<\/div>\n\n                  <div class=\"sec-Trust_Content\"><p class=\"sec-Trust_Title fz-15_120-normal\">20% Student Discount<\/p><p class=\"sec-Trust_Text fz-12_140\">Being a student has its perks, discount on all items (excludes sale)<\/p><\/div><\/div>\n            <\/div><div class=\"sec-Trust_Item\">\n              <div class=\"sec-Trust_Group\"><div class=\"sec-Trust_Image\"><div class=\"rsp-Image\" style=\"--Image_AspectRatio: 100.0%; --Aspect_Ratio: 88 \/ 88;\"><img src=\"\/\/www.skinnydiplondon.com\/cdn\/shop\/files\/trust-pay-later.png?v=1692266704&amp;width=60\" width=\"60\" height=\"60\" loading=\"lazy\" sizes=\"(max-width: 767px) 88px, (min-width: 768px) 88px\" class=\"rsp-Image_Image\"><\/div>\n<\/div>\n\n                  <div class=\"sec-Trust_Content\"><p class=\"sec-Trust_Title fz-15_120-normal\">Shop Now, Pay Later<\/p><p class=\"sec-Trust_Text fz-12_140\">Buy it, love it, pay later with Klarna - it’s that simple!<\/p><\/div><\/div>\n            <\/div><div class=\"sec-Trust_Item\">\n              <div class=\"sec-Trust_Group\"><div class=\"sec-Trust_Image\"><div class=\"rsp-Image\" style=\"--Image_AspectRatio: 100.0%; --Aspect_Ratio: 88 \/ 88;\"><img src=\"\/\/www.skinnydiplondon.com\/cdn\/shop\/files\/trust-sustainable.png?v=1692266704&amp;width=60\" width=\"60\" height=\"60\" loading=\"lazy\" sizes=\"(max-width: 767px) 88px, (min-width: 768px) 88px\" class=\"rsp-Image_Image\"><\/div>\n<\/div>\n\n                  <div class=\"sec-Trust_Content\"><p class=\"sec-Trust_Title fz-15_120-normal\">Sustainable Materials<\/p><p class=\"sec-Trust_Text fz-12_140\">We’re always working on sourcing the most planet friendly materials for our products - including recycled materials in our cases!<\/p><\/div><\/div>\n            <\/div><\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/section>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "707c42ac-3387-4e8f-a261-bb53f9693d1e": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "707c42ac-3387-4e8f-a261-bb53f9693d1e"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "23e3f926-8352-4c4e-ab6f-deaecc85b5d0",
+    "footer"
+  ]
+}
