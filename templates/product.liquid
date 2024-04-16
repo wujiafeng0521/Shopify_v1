@@ -1,0 +1,61 @@
+{% section 'product' %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",// 指定了这个数据块的类型是一个产品。
+  "name": "{{ product.title | escape }}", //产品的名称，使用 {{ product.title | escape }} 插入实际产品的标题。
+  "url": "{{ shop.url }}{{ product.url }}", //产品的 URL，使用 {{ shop.url }}{{ product.url }} 插入实际的产品 URL。
+  {% if product.featured_image %}
+    {% assign image_size = product.featured_image.width | append: 'x' %}
+    "image": [
+      "https:{{ product.featured_image.src | img_url: image_size }}"//产品的图片，使用产品的特色图片。注意，这里使用了一些 Liquid 标签来动态生成图片 URL。
+    ],
+  {% endif %}
+  "description": "{{ product.description | strip_html | escape }}",// 产品的描述，使用 {{ product.description | strip_html | escape }} 插入实际产品的描述。
+  {% if current_variant.sku != blank %}
+    "sku": "{{ current_variant.sku }}",//产品的库存单位
+  {% endif %}
+  "brand": { //产品的品牌信息，包括品牌的名称。
+    "@type": "Thing",
+    "name": "{{ product.vendor | escape }}"
+  },
+  {% if product.variants %}
+    "offers": [ // 产品的价格和可用性信息，以及产品变体的相关信息。
+      {% for variant in product.variants %}
+        {
+          "@type" : "Offer",// 指定了这个数据块的类型是一个报价。
+          "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",// 产品的可用性状态，根据产品是否可用选择 "InStock" 或 "OutOfStock"。
+          "price" : "{{ variant.price | divided_by: 100.00 }}",//产品的价格
+          "priceCurrency" : "{{ shop.currency }}",//价格的货币
+          "url" : "{{ shop.url }}{{ variant.url }}",//产品或变体的 URL。
+          "itemOffered" : //提供关于产品变体的详细信息，包括名称、图片、SKU、重量等。
+          {
+              "@type" : "Product",
+              {% if variant.image %}
+                {% assign variant_image_size = variant.image.width | append: 'x' %}
+                "image": "http:{{ variant.image.src | img_url: variant_image_size }}",
+              {% endif %}
+              {% if variant.title != blank %}
+                "name" : "{{ variant.title | escape }}",
+              {% endif %}
+              {% if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+              {% endif %}
+              {% if variant.weight != blank %}
+                "weight": {
+                  "@type": "QuantitativeValue",
+                  {% if variant.weight_unit != blank %}
+                    "unitCode": "{{ variant.weight_unit }}",
+                  {% endif %}
+                  "value": "{{ variant.weight | weight_with_unit: variant.weight_unit }}"
+                },
+              {% endif %}
+              "url": "{{ shop.url }}{{ variant.url }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  {% endif %}
+}
+</script>
