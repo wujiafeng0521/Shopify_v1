@@ -11,6 +11,9 @@
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
     "social": {
+      "share_on_facebook": "Share",
+      "share_on_twitter": "Tweet",
+      "share_on_pinterest": "Pin it",
       "alt_text": {
         "share_on_facebook": "Share on Facebook",
         "share_on_twitter": "Tweet on Twitter",
@@ -129,17 +132,7 @@
         "play_model": "Play 3D Viewer",
         "play_video": "Play video"
       },
-      "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
-        "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}",
-        "minimum_of": "Minimum of {{ quantity }}",
-        "maximum_of": "Maximum of {{ quantity }}",
-        "multiples_of": "Increments of {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart",
-        "note": "View quantity rules"
-      },
+      "quantity": "Quantity",
       "volume_pricing": {
         "title": "Volume Pricing",
         "note": "Volume pricing available",
