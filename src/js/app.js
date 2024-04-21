@@ -1,4 +1,5 @@
 import Vue from "vue";
+window.Vue = Vue;
 
 //import "jquery";
 let jquery= require('jquery');
@@ -10,3 +11,10 @@ import "bootstrap";
 
 require('./product');
 var vm = new Vue({el:"#app"})
+
+require('./components/ProductForm.js');
+
+let axios = require('axios');
+window.axios = axios;
+
+window.Noty = require('noty');
