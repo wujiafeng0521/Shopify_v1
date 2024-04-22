@@ -14965,9 +14965,94 @@ var vm = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
   el: "#app"
 });
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
+__webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/dist/browser/axios.cjs");
 window.axios = axios;
 window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
+
+/***/ }),
+
+/***/ "./src/js/components/CartForm.js":
+/*!***************************************!*\
+  !*** ./src/js/components/CartForm.js ***!
+  \***************************************/
+/***/ (() => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+if (document.querySelector('.cart-form')) {
+  var productForm = new Vue({
+    //定义新的Vue实例
+    el: ".cart-form",
+    //这是一个 Vue 实例的创建。它挂载到具有类名为 cart-form 的元素上
+    delimiters: ['${', '}'],
+    data: function data() {
+      // 返回一个包含组件数据属性的对象，这里有一个名为 cartData 的属性
+      return {
+        cartData: store.state.cartData
+      };
+    },
+    methods: {
+      //在 methods 中使用了 axios 库来进行 AJAX 请求，如 axios.post 用于更新购物车、axios.get 用于获取购物车信息。
+      updateCart: function updateCart() {
+        var result = this.cart.items.reduce(function (accumulator, target) {
+          return _objectSpread(_objectSpread({}, accumulator), {}, _defineProperty({}, target.variant_id, target.quantity));
+        }, {});
+        console.log(result);
+        axios.post('/cart/update.js', {
+          updates: result
+        }) //更新购物车
+        .then(function (response) {
+          store.state.cartData[0] = response.data;
+          new Noty({
+            type: 'success',
+            timeout: 3000,
+            layout: 'topRight',
+            text: 'Your cart items updated'
+          }).show();
+        })["catch"](function (error) {
+          new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'There was something wrong!!'
+          }).show();
+        });
+      },
+      getCart: function getCart() {
+        //获取购物车信息
+        axios.get('/cart.js').then(function (response) {
+          _this.cart = response.data;
+        })["catch"](function (error) {
+          new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'There was an error !!'
+          }).show();
+        });
+      },
+      addToCart: function addToCart() {
+        axios.post('/cart/add.js', this.form).then(function (response) {
+          new Noty({
+            type: 'success',
+            timeout: 3000,
+            layout: 'topRight',
+            text: 'Product added to cart!'
+          }).show();
+        })["catch"](function (error) {
+          new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'Some notification text'
+          }).show();
+        });
+      }
+    }
+  });
+}
 
 /***/ }),
 
@@ -14977,42 +15062,44 @@ window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js")
   \******************************************/
 /***/ (() => {
 
-var productForm = new Vue({
-  //定义新的Vue实例
-  el: ".shopify-product-form",
-  data: function data() {
-    //数据
-    return {
-      form: {
-        //将要发送的数据写在表格中
-        id: document.getElementById('variant_id').value,
-        quantity: 1
+if (document.querySelector('.shopify-product-form')) {
+  var productForm = new Vue({
+    //定义新的Vue实例
+    el: ".shopify-product-form",
+    data: function data() {
+      //数据
+      return {
+        form: {
+          //将要发送的数据写在表格中
+          id: document.getElementById('variant_id').value,
+          quantity: 1
+        }
+      };
+    },
+    methods: {
+      //方法
+      addToCart: function addToCart() {
+        axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
+        .then(function (response) {
+          console.log(response);
+          new Noty({
+            type: 'success',
+            timeout: 3000,
+            layout: 'top Right',
+            text: 'Product added to cart!'
+          }).show();
+        })["catch"](function (error) {
+          console.log(error);
+          new Noty({
+            type: 'error',
+            layout: 'top Right',
+            text: 'Some notification text'
+          }).show();
+        });
       }
-    };
-  },
-  methods: {
-    //方法
-    addToCart: function addToCart() {
-      axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
-      .then(function (response) {
-        console.log(response);
-        new Noty({
-          type: 'success',
-          timeout: 3000,
-          layout: 'top Right',
-          text: 'Product added to cart!'
-        }).show();
-      })["catch"](function (error) {
-        console.log(error);
-        new Noty({
-          type: 'error',
-          layout: 'top Right',
-          text: 'Some notification text'
-        }).show();
-      });
     }
-  }
-});
+  });
+}
 
 /***/ }),
 
