@@ -15060,7 +15060,9 @@ if (document.querySelector('.cart-form')) {
   !*** ./src/js/components/ProductForm.js ***!
   \******************************************/
 /***/ (() => {
-
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 if (document.querySelector('.shopify-product-form')) {
   var productForm = new Vue({
     //定义新的Vue实例
