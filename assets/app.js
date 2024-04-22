@@ -15170,6 +15170,40 @@ $('.product-slider-nav').slick({
 
 /***/ }),
 
+/***/ "./src/js/shared/cartData.js":
+/*!***********************************!*\
+  !*** ./src/js/shared/cartData.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   store: () => (/* binding */ store)
+/* harmony export */ });
+// Shared data between cart and mini-cart
+
+var store = {
+  state: {
+    cartData: []
+  },
+  getCart: function getCart() {
+    var _this = this;
+    axios.get('/cart.js').then(function (response) {
+      _this.state.cartData.push(response.data);
+    })["catch"](function (error) {
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'There was an error !!'
+      }).show();
+    });
+  }
+};
+
+/***/ }),
+
+  
 /***/ "./node_modules/base64-js/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
