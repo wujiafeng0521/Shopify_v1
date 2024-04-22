@@ -15059,7 +15059,7 @@ if (document.querySelector('.cart-form')) {
 /*!******************************************!*\
   !*** ./src/js/components/ProductForm.js ***!
   \******************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
