@@ -1,3 +1,4 @@
+import { store } from "./../shared/cartData.js";
 if (document.querySelector('.cart-form')){
     let productForm = new Vue({//定义新的Vue实例
         el:".cart-form",//这是一个 Vue 实例的创建。它挂载到具有类名为 cart-form 的元素上

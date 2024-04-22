@@ -14975,7 +14975,10 @@ window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js")
 /*!***************************************!*\
   !*** ./src/js/components/CartForm.js ***!
   \***************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -14983,6 +14986,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
 if (document.querySelector('.cart-form')) {
   var productForm = new Vue({
     //定义新的Vue实例
@@ -14992,7 +14996,7 @@ if (document.querySelector('.cart-form')) {
     data: function data() {
       // 返回一个包含组件数据属性的对象，这里有一个名为 cartData 的属性
       return {
-        cartData: store.state.cartData
+        cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
       };
     },
     methods: {
@@ -15006,7 +15010,7 @@ if (document.querySelector('.cart-form')) {
           updates: result
         }) //更新购物车
         .then(function (response) {
-          store.state.cartData[0] = response.data;
+          _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0] = response.data;
           new Noty({
             type: 'success',
             timeout: 3000,
@@ -15060,9 +15064,11 @@ if (document.querySelector('.cart-form')) {
   !*** ./src/js/components/ProductForm.js ***!
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
+
 if (document.querySelector('.shopify-product-form')) {
   var productForm = new Vue({
     //定义新的Vue实例
@@ -15082,24 +15088,6 @@ if (document.querySelector('.shopify-product-form')) {
       addToCart: function addToCart() {
         axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
         .then(function (response) {
-          // add data to mini cart object
-          // check if product already exist
-          var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
-            return product.variant_id == response.data.variant_id;
-          });
-          if (found) {
-            found.quantity += parseInt(_this.form.quantity);
-
-            // you can reset the quanity back to 1 if you want
-            // this.form.quantity = 1;
-          } else {
-            // add item at the start of array
-            _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
-          }
-          // open mini cart
-          // $('.mini-cart').dropdown('show');
-
-          _this.closeMiniCart();
           console.log(response);
           new Noty({
             type: 'success',
@@ -15115,12 +15103,6 @@ if (document.querySelector('.shopify-product-form')) {
             text: 'Some notification text'
           }).show();
         });
-      },
-      closeMiniCart: function closeMiniCart() {
-        // fix for boostrap dropdown javascript opening and closing
-        $('.mini-cart').addClass('show');
-        $('.mini-cart .dropdown-menu').addClass('show');
-        $('.mini-cart .dropdown-item-text').removeClass('show');
       }
     }
   });
@@ -15181,8 +15163,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   store: () => (/* binding */ store)
 /* harmony export */ });
-// Shared data between cart and mini-cart
-
 var store = {
   state: {
     cartData: []
@@ -15190,7 +15170,7 @@ var store = {
   getCart: function getCart() {
     var _this = this;
     axios.get('/cart.js').then(function (response) {
-      _this.state.cartData.push(response.data);
+      _this.state.cartData = response.data;
     })["catch"](function (error) {
       new Noty({
         type: 'error',
@@ -15203,7 +15183,6 @@ var store = {
 
 /***/ }),
 
-  
 /***/ "./node_modules/base64-js/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
