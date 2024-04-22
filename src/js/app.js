@@ -10,7 +10,7 @@ import "popper.js";
 import "bootstrap";
 
 require('./product');
-var vm = new Vue({el:"#app"})
+//var vm = new Vue({el:"#app"})
 
 require('./components/ProductForm.js');
 require('./components/CartForm.js');

@@ -14961,9 +14961,8 @@ window.jquery = window.$ = jquery; //分配给windows变量、美元符号
 
 
 __webpack_require__(/*! ./product */ "./src/js/product.js");
-var vm = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  el: "#app"
-});
+//var vm = new Vue({el:"#app"})
+
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/dist/browser/axios.cjs");
