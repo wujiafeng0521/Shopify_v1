@@ -15115,7 +15115,7 @@ if (document.querySelector('.shopify-product-form')) {
             text: 'Some notification text'
           }).show();
         });
-      }，
+      },
       closeMiniCart: function closeMiniCart() {
         // fix for boostrap dropdown javascript opening and closing
         $('.mini-cart').addClass('show');
