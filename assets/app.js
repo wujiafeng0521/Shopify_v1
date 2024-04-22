@@ -15078,7 +15078,11 @@ if (document.querySelector('.shopify-product-form')) {
       };
     },
     methods: {
-      // add data to mini cart object
+      //方法
+      addToCart: function addToCart() {
+        axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
+        .then(function (response) {
+          // add data to mini cart object
           // check if product already exist
           var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
             return product.variant_id == response.data.variant_id;
@@ -15096,10 +15100,6 @@ if (document.querySelector('.shopify-product-form')) {
           // $('.mini-cart').dropdown('show');
 
           _this.closeMiniCart();
-      //方法
-      addToCart: function addToCart() {
-        axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
-        .then(function (response) {
           console.log(response);
           new Noty({
             type: 'success',
