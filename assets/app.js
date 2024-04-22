@@ -15070,10 +15070,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 
 if (document.querySelector('.shopify-product-form')) {
-  //var productForm = new Vue({
-    Vue.createApp({
+  var productForm = new Vue({
     //定义新的Vue实例
-    //el: ".shopify-product-form",
+    el: ".shopify-product-form",
     data: function data() {
       //数据
       return {
@@ -15106,7 +15105,7 @@ if (document.querySelector('.shopify-product-form')) {
         });
       }
     }
-  }).mount('#id');
+  });
 }
 
 /***/ }),
