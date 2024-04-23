@@ -6,17 +6,17 @@ window.Vue = Vue;
 let jquery= require('jquery');
 window.jquery = window.$ = jquery;//分配给windows变量、美元符号
 
+let axios = require('axios');
+window.axios = axios;
+
 import "popper.js";
 
 import "bootstrap";
+
+window.Noty = require('noty');
 
 require('./product');
 //var vm = new Vue({el:"#app"})
 
 require('./components/ProductForm.js');
 require('./components/CartForm.js');
-
-let axios = require('axios');
-window.axios = axios;
-
-window.Noty = require('noty');

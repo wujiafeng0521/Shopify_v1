@@ -3030,16 +3030,16 @@ window.Vue = (vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default());
 var jquery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.jquery = window.$ = jquery; //分配给windows变量、美元符号
 
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/dist/browser/axios.cjs");
+window.axios = axios;
 
 
+window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 __webpack_require__(/*! ./product */ "./src/js/product.js");
 //var vm = new Vue({el:"#app"})
 
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
-var axios = __webpack_require__(/*! axios */ "./node_modules/axios/dist/browser/axios.cjs");
-window.axios = axios;
-window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 
 /***/ }),
 
