@@ -3,7 +3,7 @@
     {% for item in cart.items %}
       <div class="line-item">
         <div class="line-item-image">
-          <img src="{{ item.image | image_url }}">
+          <img src="{{ item.image | image_url }}" width="150">
         </div>
         {{ item.url }}-{{ item.id }}-{{ item.final_line_price }}
         <div class="line-item-title">
