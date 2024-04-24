@@ -1,54 +1,53 @@
 <form action="{{ routes.cart_url }}" method="post">
-    <div class="cart-items">
-        {% for item in cart.items %}
-            <div class="line-item">
-                <div class="line-item-image">{{ item.image |  image_tag }}</div>
-                {{ item.url }}-{{ item.id }}-{{ item.final_line_price }}
-                <div class="line-item-title">
-                    {{ item.title }}
-                </div>
-                <div class="line-item-price">
-                    {{ item.price |  money_with_currency}}
-                </div>
-                <div class="line-item-qty">
-                    <input type="text" name="updates[]" value="{{ item.quantity }}"><br>
-                    <input type="submit" value="Update cart">
-                </div>
-                <div class="line-item-remove">
-                    <a href="{{ item.url_to_remove }}">Remove</a>
-                </div>
-
-            </div>
-            {{ item.title }}
-            {{ item.price }}
-        {% endfor %}
-    </div>
-    <input type="submit" name="checkout" value="Checkout">
-    {{ cart.items_subtotal_price |  money_with_currency}}
+  <div class="cart-items">
+    {% for item in cart.items %}
+      <div class="line-item">
+        <div class="line-item-image">{{ item.image | image_url }}</div>
+        {{ item.url }}-{{ item.id }}-{{ item.final_line_price }}
+        <div class="line-item-title">
+          {{ item.title }}
+        </div>
+        <div class="line-item-price">
+          {{ item.price | money_with_currency }}
+        </div>
+        <div class="line-item-qty">
+          <input type="text" name="updates[]" value="{{ item.quantity }}"><br>
+          <input type="submit" value="Update cart">
+        </div>
+        <div class="line-item-remove">
+          <a href="{{ item.url_to_remove }}">Remove</a>
+        </div>
+      </div>
+      {{ item.title }}
+      {{ item.price }}
+    {% endfor %}
+  </div>
+  <input type="submit" name="checkout" value="Checkout">
+  {{ cart.items_subtotal_price | money_with_currency }}
 </form>
 
-{%  style  %} 
-    .cart-items {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #ccc;
-        width :80%;
-        margin:40px auto;
-    }
+{% style %}
+  .cart-items {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      width :80%;
+      margin:40px auto;
+  }
 
-    .line-item-title {
-        width: 30%
-    }
+  .line-item-title {
+      width: 30%
+  }
 
-    .line-item {
-        display:flex;
-        justify-context: flex-start;
-        flex-direction:row;
-        border-bottom : 1px solid #ccc;
-    }
+  .line-item {
+      display:flex;
+      justify-context: flex-start;
+      flex-direction:row;
+      border-bottom : 1px solid #ccc;
+  }
 
-    .line-item div {
-        border-right: 1px solid #ccc;
-        padding: 14px;
-    }
-{% endstyle %} 
+  .line-item div {
+      border-right: 1px solid #ccc;
+      padding: 14px;
+  }
+{% endstyle %}
