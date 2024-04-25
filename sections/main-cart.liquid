@@ -2,7 +2,7 @@
   <div class="cart-items">
     {% for item in cart.items %}
       <div class="line-item">
-        <div class="line-item-image">{{ item.image | image_url }}</div>
+        <div class="line-item-image">{{ item.image | image_tag }}</div>
         {{ item.url }}-{{ item.id }}-{{ item.final_line_price }}
         <div class="line-item-title">
           {{ item.title }}
