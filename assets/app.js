@@ -3205,7 +3205,7 @@ if (document.querySelector('.shopify-product-form')) {
                         if (found) {
                             found.quantity += parseInt(_this.form.quantity);
                         } else {
-                            store.state.cartData[0].items.unshift(response.data);
+                            _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
                         }
           new Noty({
             type: 'success',
