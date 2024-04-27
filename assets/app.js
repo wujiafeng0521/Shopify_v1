@@ -3196,6 +3196,9 @@ if (document.querySelector('.shopify-product-form')) {
            // $('.mini-cart').dropdown('show');
 
            _this.closeMiniCart();
+          created: function created() {
+               _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart();
+          },
           new Noty({
             type: 'success',
             timeout: 3000,
