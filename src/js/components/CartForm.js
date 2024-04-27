@@ -9,8 +9,24 @@ if (document.querySelector('.cart-form')){
               cartData: store.state.cartData
             };
           },
+          computed: {
+            //包含计算属性，这里有 cart_total_price 和 cart 两个计算属性
+            cart_total_price() {
+              var total = 0;
+              this.cartData[0].items.forEach((item) => {
+                total += item.quantity * item.price;
+              });
+              return total;
+            },
+            cart() {
+              return this.cartData[0];
+            }
+          },
           methods: {
             //在 methods 中使用了 axios 库来进行 AJAX 请求，如 axios.post 用于更新购物车、axios.get 用于获取购物车信息。
+            total_price(item) {
+              return item.price * item.quantity;
+            },
             updateCart() {
               let result = this.cart.items.reduce((accumulator, target) => (
                 {... accumulator, [target.variant_id] : target.quantity}),
