@@ -3171,6 +3171,9 @@ if (document.querySelector('.shopify-product-form')) {
         }
       };
     },
+    created: function created() {
+      _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart();
+    },
     methods: {
       //方法
       addToCart: function addToCart() {
@@ -3180,25 +3183,30 @@ if (document.querySelector('.shopify-product-form')) {
            console.log(response);
            // add data to mini cart object
            // check if product already exist
-           var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
-             return product.variant_id == response.data.variant_id;
-           });
-           if (found) {
-             found.quantity += parseInt(_this.form.quantity);
+           // var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
+           //   return product.variant_id == response.data.variant_id;
+           // });
+           // if (found) {
+           //   found.quantity += parseInt(_this.form.quantity);
 
-             // you can reset the quanity back to 1 if you want
-             // this.form.quantity = 1;
-           } else {
-             // add item at the start of array
-             _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
-           }
-           // open mini cart
-           // $('.mini-cart').dropdown('show');
+           //   // you can reset the quanity back to 1 if you want
+           //   // this.form.quantity = 1;
+           // } else {
+           //   // add item at the start of array
+           //   _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
+           // }
+           // // open mini cart
+           // // $('.mini-cart').dropdown('show');
 
-           _this.closeMiniCart();
-          created: function created() {
-               _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart();
-          },
+           // //_this.closeMiniCart();
+           let found = created().cartData[0].items.find(function (product) {
+                         return product.variant_id == response.data.variant_id;
+                        });
+                        if (found) {
+                            found.quantity += parseInt(_this.form.quantity);
+                        } else {
+                            store.state.cartData[0].items.unshift(response.data);
+                        }
           new Noty({
             type: 'success',
             timeout: 3000,
