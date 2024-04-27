@@ -3170,7 +3170,6 @@ if (document.querySelector('.shopify-product-form')) {
           quantity: 1
         }
       };
-      return _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.getCard();
     },
     methods: {
       //方法
