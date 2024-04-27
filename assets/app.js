@@ -3170,6 +3170,7 @@ if (document.querySelector('.shopify-product-form')) {
           quantity: 1
         }
       };
+      return _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.getCard();
     },
     methods: {
       //方法
@@ -3193,9 +3194,9 @@ if (document.querySelector('.shopify-product-form')) {
               _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
             }
             // open mini cart
-             $('.mini-cart').dropdown('show');
+             //$('.mini-cart').dropdown('show');
 
-            //_this.closeMiniCart();
+            _this.closeMiniCart();
           new Noty({
             type: 'success',
             timeout: 3000,
