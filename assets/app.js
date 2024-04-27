@@ -3174,7 +3174,7 @@ if (document.querySelector('.shopify-product-form')) {
     methods: {
       //方法
       addToCart: function addToCart() {
-        var _this2 = this;
+        var _this = this;
         axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
         .then(function (response) {
           console.log(response);
@@ -3195,7 +3195,7 @@ if (document.querySelector('.shopify-product-form')) {
           // open mini cart
           // $('.mini-cart').dropdown('show');
 
-          _this2.closeMiniCart();
+          _this.closeMiniCart();
           new Noty({
             type: 'success',
             timeout: 3000,
