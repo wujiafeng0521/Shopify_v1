@@ -3222,12 +3222,12 @@ if (document.querySelector('.shopify-product-form')) {
           }).show();
         });
       },
-       closeMiniCart: function closeMiniCart() {
-         // fix for boostrap dropdown javascript opening and closing
-         $('.mini-cart').addClass('show');
-         $('.mini-cart .dropdown-menu').addClass('show');
-         $('.mini-cart .dropdown-item-text').removeClass('show');
-       }
+       // closeMiniCart: function closeMiniCart() {
+       //   // fix for boostrap dropdown javascript opening and closing
+       //   $('.mini-cart').addClass('show');
+       //   $('.mini-cart .dropdown-menu').addClass('show');
+       //   $('.mini-cart .dropdown-item-text').removeClass('show');
+       // }
     }
   });
 }
