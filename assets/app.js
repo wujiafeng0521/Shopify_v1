@@ -3114,6 +3114,7 @@ if (document.querySelector('.cart-form')) {
         });
       },
       getCart: function getCart() {
+        var _this = this;
         //获取购物车信息
         axios.get('/cart.js').then(function (response) {
           _this.cart = response.data;
