@@ -3279,7 +3279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var store = {
   state: {
-    cartData: [return getCart()];
+    cartData: [items:{id:47872257655066,quantity:1}];
   },
   getCart: function getCart() {
     var _this = this;
