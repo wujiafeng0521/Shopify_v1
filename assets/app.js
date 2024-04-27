@@ -3179,20 +3179,20 @@ if (document.querySelector('.shopify-product-form')) {
         axios.post('/cart/add.js', this.form) //要填入发送的地址以及参数
          .then(function (response) {
            console.log(response);
-           // add data to mini cart object
-           // check if product already exist
-            var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
-              return product.variant_id == response.data.variant_id;
-            });
-            if (found) {
-              found.quantity += parseInt(_this.form.quantity);
+           // // add data to mini cart object
+           // // check if product already exist
+           //  var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
+           //    return product.variant_id == response.data.variant_id;
+           //  });
+           //  if (found) {
+           //    found.quantity += parseInt(_this.form.quantity);
 
-              // you can reset the quanity back to 1 if you want
-              // this.form.quantity = 1;
-            } else {
-              // add item at the start of array
-              _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
-            }
+           //    // you can reset the quanity back to 1 if you want
+           //    // this.form.quantity = 1;
+           //  } else {
+           //    // add item at the start of array
+           //    _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
+           //  }
             // open mini cart
              //$('.mini-cart').dropdown('show');
 
