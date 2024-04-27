@@ -3195,7 +3195,7 @@ if (document.querySelector('.shopify-product-form')) {
             // open mini cart
              //$('.mini-cart').dropdown('show');
 
-            _this.closeMiniCart();
+            //_this.closeMiniCart();
           new Noty({
             type: 'success',
             timeout: 3000,
@@ -3211,12 +3211,12 @@ if (document.querySelector('.shopify-product-form')) {
           }).show();
         });
       },
-        closeMiniCart: function closeMiniCart() {
-          // fix for boostrap dropdown javascript opening and closing
-          $('.mini-cart').addClass('show');
-          $('.mini-cart .dropdown-menu').addClass('show');
-          $('.mini-cart .dropdown-item-text').removeClass('show');
-        }
+        // closeMiniCart: function closeMiniCart() {
+        //   // fix for boostrap dropdown javascript opening and closing
+        //   $('.mini-cart').addClass('show');
+        //   $('.mini-cart .dropdown-menu').addClass('show');
+        //   $('.mini-cart .dropdown-item-text').removeClass('show');
+        // }
     }
   });
 }
