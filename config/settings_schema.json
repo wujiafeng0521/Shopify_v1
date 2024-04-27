@@ -8,6 +8,17 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "导航链接图像",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "navigation_image",
+        "label": "导航链接图像",
+        "info": "为导航链接添加图像"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
@@ -30,6 +41,23 @@
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "Generic Section",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "generic_section_title",
+        "default": "Default Title"
+      },
+      {
+        "type": "textarea",
+        "label": "Content",
+        "id": "generic_section_content",
+        "default": "Default Content"
       }
     ]
   },
@@ -1457,6 +1485,49 @@
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social sharing image"
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Image",
+        "info": "Shown when sharing a link on social media. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) about image thumbnails."
+      },
+      {
+        "type": "header",
+        "content": "Social sharing options"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_blog",
+        "label": "Enable sharing for blog articles",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": "Share on Facebook",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": "Tweet on Twitter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_pinterest",
+        "label": "Pin on Pinterest",
+        "default": true
       }
     ]
   }
