@@ -3040,7 +3040,6 @@ __webpack_require__(/*! ./product */ "./src/js/product.js");
 
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
-__webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCart.js");
 
 /***/ }),
 
@@ -3224,120 +3223,7 @@ if (document.querySelector('.shopify-product-form')) {
 
 /***/ }),
 
-/***/ "./src/js/components/MiniCart.js":
-/*!***************************************!*\
-  !*** ./src/js/components/MiniCart.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
-/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/cloneDeep */ "./node_modules/lodash/cloneDeep.js");
-/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1__);
-
-
-if (document.querySelector('.mini-cart')) {
-  var MiniCart = new Vue({
-    el: ".mini-cart",
-    delimiters: ['${', '}'],
-    data: function data() {
-      return {
-        cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
-      };
-    },
-    computed: {
-      cart: function cart() {
-        return this.cartData[0];
-      }
-    },
-    created: function created() {
-      // mini cart is on every page, that's why, we cal it once here
-      _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart();
-    },
-    methods: {
-      // Remove item from cart
-      remove: function remove(item) {
-        var found = this.cart.items.find(function (product) {
-          return product.variant_id == item.variant_id;
-        });
-        if (found) {
-          this.$delete(this.cart.items, this.cart.items.indexOf(found));
-        }
-      },
-      // Increment item by 1
-      increment: function increment(item) {
-        var found = this.cart.items.find(function (product) {
-          return product.variant_id == item.variant_id;
-        });
-        if (found) {
-          this.updateCart(found, 1);
-        }
-      },
-      // Decrement item by 1
-      decrement: function decrement(item) {
-        var found = this.cart.items.find(function (product) {
-          return product.variant_id == item.variant_id;
-        });
-        if (found) {
-          if (item.quantity > 0) {
-            this.updateCart(found, -1);
-          }
-        }
-      },
-      updateCart: function updateCart(item, quantity) {
-        var _this = this;
-        var q = quantity + item.quantity;
-        var data = {
-          quantity: q,
-          id: item.key
-        };
-        if (q < 1) {
-          this.remove(item);
-        }
-        axios.post('/cart/change.js', data).then(function (response) {
-          // Find the current item and new item to compare the quanity
-          var currentItem = _this.cartData[0].items.find(function (product) {
-            return product.variant_id == item.variant_id;
-          });
-          var newItem = response.data.items.find(function (product) {
-            return product.variant_id == item.variant_id;
-          });
-
-          // If item exist
-          if (currentItem) {
-            // check if item quantity changed. Only change.js can detect this on response
-            if (quantity > 0 && currentItem.quantity == newItem.quantity) {
-              new Noty({
-                type: 'warning',
-                timeout: 3000,
-                layout: 'topRight',
-                text: 'No more in stock'
-              }).show();
-            } else {
-              // add one to current item
-              currentItem.quantity += quantity;
-              new Noty({
-                type: 'success',
-                timeout: 3000,
-                layout: 'topRight',
-                text: 'Your cart items updated'
-              }).show();
-            }
-          }
-        })["catch"](function (error) {
-          console.log(error);
-          new Noty({
-            type: 'error',
-            timeout: 3000,
-            layout: 'topRight',
-            text: 'There was something wrong!!'
-          }).show();
-        });
-      }
-    }
-  });
-}
 /***/ "./src/js/product.js":
 /*!***************************!*\
   !*** ./src/js/product.js ***!
