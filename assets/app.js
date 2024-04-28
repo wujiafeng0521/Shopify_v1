@@ -3084,6 +3084,10 @@ if (document.querySelector('.cart-form')) {
         return this.cartData[0];
       }
     },
+    created() {
+          store.getCart();
+    },
+
     methods: {
       //在 methods 中使用了 axios 库来进行 AJAX 请求，如 axios.post 用于更新购物车、axios.get 用于获取购物车信息。
       total_price: function total_price(item) {
