@@ -21,7 +21,9 @@
                   <template v-if="cart">
     
                         <template v-for="(item, index) in cart.items">
-                        
+                                        <div  class="title">
+          {{ item.product_title }}
+        </div>
         
                         {% comment %}
             
