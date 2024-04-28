@@ -55,7 +55,7 @@ if (document.querySelector('.cart-form')){
             getCart() {
                 //获取购物车信息
                 axios.get('/cart.js').then( response => {
-                  _this.cart = response.data;
+                  this.cart = response.data;
                 })
                 .catch( error => {
                   new Noty({
