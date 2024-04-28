@@ -3343,17 +3343,6 @@ var store = {
 "line_level_total_discount": 0,
 "has_components": false
 }],
-"options_with_values": [
-{
-"name": "颜色",
-"value": "black"
-}
-],
-"line_level_discount_allocations": [],
-"line_level_total_discount": 0,
-"has_components": false
-}
-],
 "requires_shipping": true,
 "currency": "USD",
 "items_subtotal_price": 54455,
