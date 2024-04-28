@@ -3280,74 +3280,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var store = {
   state: {
-    //cartData: []
-    cartData:{
-      "token": "Z2NwLXVzLWNlbnRyYWwxOjAxSFcwWjRDVFozTlQxNFJDVDVQWkY4Mko3",
-"note": "",
-"attributes": {},
-"original_total_price": 54455,
-"total_price": 54455,
-"total_discount": 0,
-"total_weight": 0,
-"item_count": 10,
-"items": [
-{
-"id": 47872257655066,
-"properties": {},
-"quantity": 6,
-"variant_id": 47872257655066,
-"key": "47872257655066:887f309d7d427125d271d3dbca4157ae",
-"title": "thermos cup - pink",
-"price": 6500,
-"original_price": 6500,
-"presentment_price": 65,
-"discounted_price": 6500,
-"line_price": 39000,
-"original_line_price": 39000,
-"total_discount": 0,
-"discounts": [],
-"sku": "",
-"grams": 0,
-"vendor": "strangbear",
-"taxable": true,
-"product_id": 8775950270746,
-"product_has_only_default_variant": false,
-"gift_card": false,
-"final_price": 6500,
-"final_line_price": 39000,
-"url": "/products/cup-6?variant=47872257655066",
-"featured_image": {
-"aspect_ratio": 1,
-"alt": "thermos cup",
-"height": 800,
-"url": "https://cdn.shopify.com/s/files/1/0836/5850/6522/files/O1CN014a0AlL1Gy3xxYqa6o__2703990690-0-cib.jpg?v=1698554093",
-"width": 800
-},
-"image": "https://cdn.shopify.com/s/files/1/0836/5850/6522/files/O1CN014a0AlL1Gy3xxYqa6o__2703990690-0-cib.jpg?v=1698554093",
-"handle": "cup-6",
-"requires_shipping": true,
-"product_type": "",
-"product_title": "thermos cup",
-"product_description": "This is a thermos cup",
-"variant_title": "pink",
-"variant_options": [
-"pink"
-],
-"options_with_values": [
-{
-"name": "颜色",
-"value": "pink"
-}
-],
-"line_level_discount_allocations": [],
-"line_level_total_discount": 0,
-"has_components": false
-}],
-"requires_shipping": true,
-"currency": "USD",
-"items_subtotal_price": 54455,
-"cart_level_discount_applications": []
-    }
+    cartData: []
   },
   getCart: function getCart() {
     var _this = this;
