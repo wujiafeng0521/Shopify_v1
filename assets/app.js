@@ -3280,7 +3280,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var store = {
   state: {
-    cartData: []
+    //cartData: []
+    cartData: [items:{
+      id: 47872257655066,
+      properties: {},
+      quantity: 6,
+      variant_id: 47872257655066,
+      key: "47872257655066:887f309d7d427125d271d3dbca4157ae",
+      title: "thermos cup - pink",
+      price: 6500
+
+    }]
   },
   getCart: function getCart() {
     var _this = this;
