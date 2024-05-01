@@ -3068,7 +3068,8 @@ if (document.querySelector('.cart-form')) {
     data: function data() {
       // 返回一个包含组件数据属性的对象，这里有一个名为 cartData 的属性
       return {
-        cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
+        //cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
+        cartData: shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart()
       };
     },
     computed: {
