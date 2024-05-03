@@ -1,3 +1,5 @@
+//Shared data between cart and mini-cart
+
 export const store = {
 
     state: {
@@ -6,7 +8,7 @@ export const store = {
     getCart(){      
         axios.get('/cart.js')
                 .then( response => {                    
-                     this.state.cartData=response.data;                  
+                     this.state.cartData.push(response.data);                  
                 })
                 .catch( error => {
                     new Noty({

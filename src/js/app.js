@@ -18,5 +18,6 @@ window.Noty = require('noty');
 require('./product');
 //var vm = new Vue({el:"#app"})
 
+require('./components/MiniCart.js');
 require('./components/ProductForm.js');
 require('./components/CartForm.js');

@@ -16,25 +16,25 @@ if (document.querySelector('.shopify-product-form')){
             addToCart(){
                 axios.post('/cart/add.js', this.form )//要填入发送的地址以及参数
                     .then( (response) => {
-                        // console.log(response);
-                        // // add data to mini cart object
-                        // // check if product already exist
-                        // let found = store.state.cartData[0].items.find(product => {
-                        //  return product.variant_id == response.data.variant_id;
-                        // });
-                        // if (found) {
-                        //     found.quantity += parseInt(_this.form.quantity);
+                         //console.log(response);
+                         // add data to mini cart object
+                         // check if product already exist
+                         let found = store.state.cartData[0].items.find(product => {
+                          return product.variant_id == response.data.variant_id;
+                         });
+                         if (found) {
+                             found.quantity += parseInt(_this.form.quantity);
 
-                        //     // you can reset the quanity back to 1 if you want
-                        //     // this.form.quantity = 1;
-                        // } else {
-                        //     // add item at the start of array
-                        //     store.state.cartData[0].items.unshift(response.data);
-                        // }
-                        //     // open mini cart
-                        //     // $('.mini-cart').dropdown('show');
+                             // you can reset the quanity back to 1 if you want
+                             // this.form.quantity = 1;
+                         } else {
+                             // add item at the start of array
+                             store.state.cartData[0].items.unshift(response.data);
+                         }
+                             // open mini cart
+                             // $('.mini-cart').dropdown('show');
 
-                        // this.closeMiniCart();
+                         this.closeMiniCart();
                         new Noty({
                             type:'success',
                             timeout: 3000,
