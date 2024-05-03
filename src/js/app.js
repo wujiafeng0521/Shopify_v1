@@ -21,3 +21,6 @@ require('./product');
 require('./components/MiniCart.js');
 require('./components/ProductForm.js');
 require('./components/CartForm.js');
+
+//Vue custom filter
+require('./filters/money.js');

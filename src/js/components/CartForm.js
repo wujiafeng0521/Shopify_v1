@@ -12,8 +12,8 @@ if (document.querySelector('.cart-form')){
           computed: {
             //包含计算属性，这里有 cart_total_price 和 cart 两个计算属性
             cart_total_price() {
-              var total = 0;
-              this.cartData[0].items.forEach((item) => {
+              let total = 0;
+              this.cartData[0].items.forEach(item => {
                 total += item.quantity * item.price;
               });
               return total;

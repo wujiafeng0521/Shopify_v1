@@ -3042,6 +3042,9 @@ __webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCar
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
 
+//Vue custom filter
+__webpack_require__(/*! ./filters/money.js */ "./src/js/filters/money.js");
+
 /***/ }),
 
 /***/ "./src/js/components/CartForm.js":
@@ -3336,6 +3339,20 @@ if (document.querySelector('.shopify-product-form')) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/filters/money.js":
+/*!*********************************!*\
+  !*** ./src/js/filters/money.js ***!
+  \*********************************/
+/***/ (() => {
+
+Vue.filter('money', function (value) {
+  var sign = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '$';
+  if (!value) return 0;
+  return sign + (value / 100).toFixed(2);
+});
 
 /***/ }),
 
