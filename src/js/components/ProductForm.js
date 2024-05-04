@@ -1,4 +1,4 @@
-//import { store } from "./../shared/cartData.js";
+import { store } from "./../shared/cartData.js";
 if (document.querySelector('.shopify-product-form')){
     let productForm = new Vue({//定义新的Vue实例
         el:".shopify-product-form",

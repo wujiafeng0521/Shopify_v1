@@ -3042,6 +3042,9 @@ __webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCar
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
 
+//Vue custom filter
+__webpack_require__(/*! ./filters/money.js */ "./src/js/filters/money.js");
+
 /***/ }),
 
 /***/ "./src/js/components/CartForm.js":
@@ -3087,9 +3090,9 @@ if (document.querySelector('.cart-form')) {
     },
     methods: {
       //在 methods 中使用了 axios 库来进行 AJAX 请求，如 axios.post 用于更新购物车、axios.get 用于获取购物车信息。
-       total_price: function total_price(item) {
-         return item.price * item.quantity;
-       },
+      total_price: function total_price(item) {
+        return item.price * item.quantity;
+      },
       updateCart: function updateCart() {
         var result = this.cart.items.reduce(function (accumulator, target) {
           return _objectSpread(_objectSpread({}, accumulator), {}, _defineProperty({}, target.variant_id, target.quantity));
@@ -3270,9 +3273,12 @@ if (document.querySelector('.mini-cart')) {
 /*!******************************************!*\
   !*** ./src/js/components/ProductForm.js ***!
   \******************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-//import { store } from "./../shared/cartData.js";
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
+
 if (document.querySelector('.shopify-product-form')) {
   var productForm = new Vue({
     //定义新的Vue实例
@@ -3296,7 +3302,7 @@ if (document.querySelector('.shopify-product-form')) {
           //console.log(response);
           // add data to mini cart object
           // check if product already exist
-          var found = store.state.cartData[0].items.find(function (product) {
+          var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
             return product.variant_id == response.data.variant_id;
           });
           if (found) {
@@ -3306,7 +3312,7 @@ if (document.querySelector('.shopify-product-form')) {
             // this.form.quantity = 1;
           } else {
             // add item at the start of array
-            store.state.cartData[0].items.unshift(response.data);
+            _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
           }
           // open mini cart
           // $('.mini-cart').dropdown('show');
@@ -3336,6 +3342,20 @@ if (document.querySelector('.shopify-product-form')) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/filters/money.js":
+/*!*********************************!*\
+  !*** ./src/js/filters/money.js ***!
+  \*********************************/
+/***/ (() => {
+
+Vue.filter('money', function (value) {
+  var sign = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '$';
+  if (!value) return 0;
+  return sign + (value / 100).toFixed(2);
+});
 
 /***/ }),
 
