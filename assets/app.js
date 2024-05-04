@@ -3317,7 +3317,7 @@ if (document.querySelector('.shopify-product-form')) {
           // open mini cart
           // $('.mini-cart').dropdown('show');
 
-          _this2.closeMiniCart();
+          _this.closeMiniCart();
           new Noty({
             type: 'success',
             timeout: 3000,
