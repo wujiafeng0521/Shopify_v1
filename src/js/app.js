@@ -1,3 +1,8 @@
+//Lazy loading
+import 'lazysizes';
+//import a plugin
+import 'lazysizes/plugins/parent-fit/ls.parent-fit.js';
+
 //import Vue from "vue";
 import Vue from "vue/dist/vue.js";
 window.Vue = Vue;
