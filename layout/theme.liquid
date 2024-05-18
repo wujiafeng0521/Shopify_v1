@@ -64,7 +64,12 @@
 
   {% comment %} <a class="in-page-link sr-only" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a> {% endcomment %}
 
-  {% section 'header' %}
+  {% comment %}{% section 'header' %}{% endcomment %}
+  <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+    {{ 'accessibility.skip_to_text' | t }}
+  </a>
+
+  {%- sections 'header-group' -%}
 
   <div id="app">
         <!-- 这里是你的 Vue 应用的内容 -->
