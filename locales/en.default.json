@@ -56,6 +56,12 @@
       "email_placeholder": "Email address",
       "confirmation": "Thanks for subscribing",
       "submit": "Subscribe"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left",
+      "name": "Slider"
     }
   },
   "accessibility": {
