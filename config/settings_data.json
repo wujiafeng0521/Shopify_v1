@@ -1,6 +1,10 @@
 {
   "current": {
     "navigation_image": "shopify:\/\/shop_images\/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
+    "page_width": 1100,
+    "card_style": "card",
+    "badge_position": "top right",
+    "currency_code_enabled": true,
     "sections": {
       "header": {
         "type": "header",
