@@ -120,50 +120,16 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "sections": {
-      "header": {
-        "type": "header",
+      "main-password-header": {
+        "type": "main-password-header",
         "settings": {
-          "announcement_bar_enabled": false,
-          "announcement_bar_home_page_only": true,
-          "announcement_bar_text": "Announce something here",
-          "announcement_bar_link": "",
-          "logo": "shopify:\/\/shop_images\/WechatIMG1030-removebg-preview.png",
-          "logo_max_width": 100,
-          "menu": "main-menu"
+          "color_scheme": "background-1"
         }
       },
-      "image-slider": {
-        "type": "image-slider",
-        "blocks": {
-          "image_RkFHD8": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-              "title": "First"
-            }
-          },
-          "image_zNwQgH": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-              "title": "second"
-            }
-          },
-          "image_fg4TB3": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
-              "title": "Third"
-            }
-          }
-        },
-        "block_order": [
-          "image_RkFHD8",
-          "image_zNwQgH",
-          "image_fg4TB3"
-        ],
+      "main-password-footer": {
+        "type": "main-password-footer",
         "settings": {
-          "title": ""
+          "color_scheme": "background-1"
         }
       },
       "footer": {
@@ -171,16 +137,6 @@
         "settings": {
           "footer_linklist": "footer",
           "show_payment_icons": false
-        }
-      },
-      "collection-template": {
-        "type": "collection-template",
-        "settings": {
-          "is_full_width": false,
-          "header_align": "left",
-          "header_height": 120,
-          "collection_nav": "link-list",
-          "hide_tags": false
         }
       }
     },
