@@ -444,6 +444,122 @@
         "info": "Standard-styled cards have no borders when an image shape is active."
       }
     },
+    "dbtfy_pricing_table": {
+      "name": "⚡ Pricing Table",
+      "settings": {
+        "header__1": {
+          "content": "Help Center"
+        },
+        "paragraph__1": {
+          "content": "[Follow our step-by-step tutorial](https:\/\/help.debutify.com\/en\/articles\/5054183-how-to-enable-the-pricing-table-add-on-in-the-debutify-theme)"
+        },
+        "paragraph__2": {
+          "content": "To enable\/disable this add-on, go to Theme settings > Debutify Add-ons."
+        },
+        "show_on_desktop": {
+          "label": "Show on desktop"
+        },
+        "show_on_mobile": {
+          "label": "Show on mobile"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "Subheading"
+        },
+        "section_style": {
+          "label": "Section style",
+          "options__1": {
+            "label": "Blank background"
+          },
+          "options__2": {
+            "label": "Accent background"
+          },
+          "options__3": {
+            "label": "Border top"
+          }
+        },
+        "button_position": {
+          "label": "Button position",
+          "options__1": {
+            "label": "Middle"
+          },
+          "options__2": {
+            "label": "Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "plan": {
+          "name": "Plan",
+          "settings": {
+            "block_name": {
+              "label": "Block name",
+              "info": "Used for internal identification"
+            },
+            "enable_full_background": {
+              "label": "Enable full background"
+            },
+            "badge": {
+              "label": "Badge"
+            },
+            "image": {
+              "label": "Image"
+            },
+            "icon": {
+              "label": "Icon",
+              "info": "[View all available icons](https:\/\/material.io\/resources\/icons)"
+            },
+            "title": {
+              "label": "title"
+            },
+            "description": {
+              "label": "Description"
+            },
+            "price": {
+              "label": "Price"
+            },
+            "price_text": {
+              "label": "Price text"
+            },
+            "button_label": {
+              "label": "Button label"
+            },
+            "button_link": {
+              "label": "Button link"
+            },
+            "button_style": {
+              "label": "Button style",
+              "options__1": {
+                "label": "Default"
+              },
+              "options__2": {
+                "label": "Full"
+              },
+              "options__3": {
+                "label": "Outline"
+              }
+            },
+            "button_description": {
+              "label": "Button description"
+            },
+            "details": {
+              "label": "Details",
+              "info": "Comma-separated"
+            },
+            "details_icon": {
+              "label": "Detail icon",
+              "info": "[View all available icons](https:\/\/material.io\/resources\/icons)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "⚡ Pricing Table",
+        "category": "Add-ons"
+      }
+    },
     "announcement-bar": {
       "name": "Announcement bar",
       "settings": {
