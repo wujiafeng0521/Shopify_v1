@@ -1,4 +1,4 @@
-{%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%}
+{% comment %} {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%}{% endcomment %}
 <div id="PricingTable"
      class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
      data-section-id="{{ section.id }}"
@@ -45,10 +45,20 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                <div class="card-image media-wrapper" style="padding-top: {{ 1 | divided_by: block.settings.dbtfy_plan_image.aspect_ratio | times: 100 }}%;">
-                  <img class="pt-plan-image media lazyload"
+                 <div class="card-image media-wrapper" style="position:relative;display: inline-block">
+                  {% comment %}<img class="pt-plan-image media lazyload"
                   {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
-                  alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                  alt="{{ block.settings.dbtfy_plan_image.alt }}">{% endcomment %}
+                  <img src={{ block.settings.dbtfy_plan_image | img_url:'300x'}}
+                            data-src="{{ block.settings.dbtfy_plan_image |     img_url:'500x500', crop:'center' }}"
+                            alt=""
+                            class="img-fluid lazyload">
+                            {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank-%}
+                                {% assign original_price = block.settings.dbtfy_plan_price %}
+                                {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
+                                {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
+                                <span style="position: absolute;bottom: 0; right: 0;background-color: rgba(0, 0, 0, 0.5);color: #fff;padding: 4px 8px; font-size: 12px;">{{ discount_rate | ceil}}% OFF</span>
+                            {%- endif -%}
                 </div>
                 {%- endif -%}
 
@@ -63,8 +73,16 @@
                     <p>{{ block.settings.dbtfy_plan_description }}</p>
                   {%- endif -%}
 
-                  {%- if block.settings.dbtfy_plan_price != blank -%}
+                  {% comment %}{%- if block.settings.dbtfy_plan_price != blank -%}
                     <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price }}</h3>
+                  {%- endif -%}{% endcomment %}
+                  {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
+                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
+                  {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
+                    <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
+                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
+                  {% else %}
+                    <h3>error</h3>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_price_text != blank -%}
@@ -127,7 +145,7 @@
     </div>
   </div>
 </div>
-{%- endif -%}
+{% comment %}{%- endif -%}{% endcomment %}
 
 {% schema %}
   {
@@ -254,10 +272,16 @@
             "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.description.label"
           },
 				  {
-            "type": "text",
+            "type": "number",
             "id": "dbtfy_plan_price",
             "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.price.label",
-            "default": "$19.99"
+            "default": 0
+          },
+          {
+            "type": "number",
+            "id": "dbtfy_plan_discount_price",
+            "label": "Discount Price",
+            "default": 0
           },
           {
             "type": "text",
