@@ -34,37 +34,90 @@
         "title": ""
       }
     },
-    "featured_collection_3y3aTX": {
-      "type": "featured-collection",
+    "dbtfy_pricing_table_AWVnKX": {
+      "type": "dbtfy-pricing-table",
+      "blocks": {
+        "plan_hNw44b": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/CUP_1c8ee3d5-4f5e-4531-93a4-46e0aa3763ce.jpg",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": 100,
+            "dbtfy_plan_discount_price": 20,
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
+        },
+        "plan_6AkBxV": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/O1CN01Uazzx71WM51Pj7nJ7__2817662773-0-cib.jpg",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": 200,
+            "dbtfy_plan_discount_price": 20,
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
+        },
+        "plan_NhTq9z": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/O1CN01bBIe4X1kh3rcPyISS__2208650344714-0-cib.jpg",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": 300,
+            "dbtfy_plan_discount_price": 30,
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
+        }
+      },
+      "block_order": [
+        "plan_hNw44b",
+        "plan_6AkBxV",
+        "plan_NhTq9z"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "thermos",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "Pricing table",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "dbtfy_button_position": "middle"
       }
     }
   },
   "order": [
     "image-slider",
-    "featured_collection_3y3aTX"
+    "dbtfy_pricing_table_AWVnKX"
   ]
 }
