@@ -14385,6 +14385,81 @@ fieldset:disabled .btn {
   height: 100%;
 }
 /*================ _Cards ================*/
+.card {
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+.card:empty {
+  display: none;
+}
+.section-default .card {
+  background-color: #FFFFFF;
+}
+.card .card {
+  background-color: #e4e4e4;
+}
+.card + .modal-footer {
+  border-top: 0;
+}
+
+.card-full {
+  border-radius: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .card-group > .card {
+    border-radius: 0;
+  }
+  .card-group > .card:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .card-group > .card:last-of-type {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+.card-group > .card + .card {
+  margin-top: 16px;
+}
+@media screen and (max-width: 769px) {
+  .card-group > .card + .card {
+    border-top: 1px solid #ffffff;
+    margin-top: 0;
+  }
+  #CartDrawer .card-group > .card + .card {
+    border-top: inherit;
+    margin-top: 16px;
+  }
+}
+
+.card-header {
+  border-bottom: 1px solid #ffffff;
+  padding: 16px;
+  border-radius: 0;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+.card-header:empty {
+  display: none;
+}
+
+.card-header:not(.active) .card-header-icon {
+  color: inherit;
+  flex-shrink: 0;
+}
+
 .card-image {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
@@ -14393,6 +14468,52 @@ fieldset:disabled .btn {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex: auto;
+  flex: auto;
+}
+.card-body.rte {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 769px) {
+  .card-body {
+    padding: 16px;
+  }
+}
+.card-body > :last-child {
+  margin-bottom: 0;
+}
+
+.card-body-xs {
+  padding: 8px;
+}
+
+.card-body-lg {
+  padding: 30px;
+}
+
+.card-footer {
+  border-top: 1px solid #ffffff;
+  padding: 16px;
+}
+.card-footer > :last-child {
+  margin-bottom: 0;
+}
+.card-footer:empty {
+  display: none;
+}
+
+.card-footer-xs {
+  padding: 8px;
+}
+
 
 /* start-dbtfy-pricing-table */
 .dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-plan-details {
