@@ -50,7 +50,7 @@
                   {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
                   alt="{{ block.settings.dbtfy_plan_image.alt }}">{% endcomment %}
                   <img src={{ block.settings.dbtfy_plan_image | img_url:'300x'}}
-                            data-src="{{ block.settings.dbtfy_plan_image |     img_url:'500x500', crop:'center' }}"
+                            data-src="{{ block.settings.dbtfy_plan_image |     img_url:'900x900', crop:'center' }}"
                             alt=""
                             class="img-fluid lazyload">
                             {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank-%}
