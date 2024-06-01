@@ -14384,6 +14384,15 @@ fieldset:disabled .btn {
 .product-single__media-wrapper .plyr__video-wrapper {
   height: 100%;
 }
+/*================ _Cards ================*/
+.card-image {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.card-image img {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
 
 /* start-dbtfy-pricing-table */
 .dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-plan-details {
