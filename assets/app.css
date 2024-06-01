@@ -5034,7 +5034,7 @@ fieldset:disabled .btn {
 [data-bs-theme=dark] .navbar-toggler-icon {
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
-
+/*================
 .card {
     --bs-card-spacer-y: 1rem;
     --bs-card-spacer-x: 1rem;
@@ -5058,7 +5058,7 @@ fieldset:disabled .btn {
     word-wrap: break-word;
     background-clip: border-box;
     background-color: var(--bs-card-bg);
-    /* border: var(--bs-card-border-width) solid var(--bs-card-border-color);*/
+     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
     color: var(--bs-body-color);
     display: flex;
@@ -5067,7 +5067,7 @@ fieldset:disabled .btn {
     min-width: 0;
     position: relative
 }
-
+================ */
 .card>hr {
     margin-left: 0;
     margin-right: 0
