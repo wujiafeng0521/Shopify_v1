@@ -14128,6 +14128,66 @@ fieldset:disabled .btn {
     border-bottom: 1px solid #a0b55c;
     color: #fff
 }
+
+/*================ _Box ================*/
+.box {
+  transition: all 0.3s ease;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 769.1px) {
+  .box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.section-full-width > .box {
+  padding-bottom: 0;
+}
+.section-full-width.section-no-title > .box {
+  padding-top: 0;
+}
+
+@media screen and (min-width: 769.1px) {
+  .box-small {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/*================ _Wrapper ================*/
+.wrapper {
+  transition: padding 0.3s ease, max-width 0.3s ease;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1180px;
+}
+@media screen and (max-width: 769px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.wrapper-fluid {
+  transition: padding 0.3s ease, max-width 0.3s ease;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 100%;
+}
+@media screen and (max-width: 769px) {
+  .wrapper-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.wrapper-full {
+  max-width: 100%;
+}
+
 /* start-dbtfy-pricing-table */
 .dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-plan-details {
   padding-bottom: 16px;
