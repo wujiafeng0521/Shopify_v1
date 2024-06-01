@@ -45,7 +45,7 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                 <div class="card-image media-wrapper" style="position:relative;display: inline-block">
+                 <div class="card-image media-wrapper" style="position:relative;display: inline-block;overflow: hidden;">
                   {% comment %}<img class="pt-plan-image media lazyload"
                   {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
                   alt="{{ block.settings.dbtfy_plan_image.alt }}">{% endcomment %}
