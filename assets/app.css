@@ -14128,3 +14128,31 @@ fieldset:disabled .btn {
     border-bottom: 1px solid #a0b55c;
     color: #fff
 }
+/* start-dbtfy-pricing-table */
+.dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-plan-details {
+  padding-bottom: 16px;
+}
+.dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-button-bottom .pt-sub-text {
+  margin-bottom: 0;
+}
+.dbtfy-pricing_table .pt-plan-wrapper {
+  position: relative;
+}
+.dbtfy-pricing_table .pt-full-background {
+  color: #FFFFFF;
+  background-color: #e22120;
+}
+.dbtfy-pricing_table .pt-full-background .card-header {
+  border-color: #b71918;
+}
+.dbtfy-pricing_table .pt-full-background .pt-plan-title, .dbtfy-pricing_table .pt-full-background .pt-plan-price, .dbtfy-pricing_table .pt-full-background .pt-icon-detail {
+  color: #FFFFFF;
+}
+.dbtfy-pricing_table .pt-badge {
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* end-dbtfy-pricing-table */
