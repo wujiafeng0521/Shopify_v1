@@ -14187,6 +14187,84 @@ fieldset:disabled .btn {
 .wrapper-full {
   max-width: 100%;
 }
+/*================ _Grid ================*/
+.grid {
+  list-style: none;
+  margin: 0;
+  margin-left: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 769px) {
+  .grid {
+    margin-left: -16px;
+  }
+}
+.grid.grid-full {
+  margin-left: 0;
+}
+.grid.grid-small {
+  margin-left: -16px;
+}
+.grid.grid-xsmall {
+  margin-left: -8px;
+}
+.grid.grid-spacer {
+  margin-bottom: -30px;
+}
+@media screen and (max-width: 769px) {
+  .grid.grid-spacer {
+    margin-bottom: -16px;
+  }
+}
+.grid.grid-spacer.grid-small {
+  margin-bottom: -16px;
+}
+.grid.grid-spacer.grid-xsmall {
+  margin-bottom: -8px;
+}
+
+.grid__item {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 30px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+@media screen and (max-width: 769px) {
+  .grid__item {
+    padding-left: 16px;
+    width: 100%;
+    -moz-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+.grid-full > .grid__item {
+  padding-left: 0 !important;
+}
+.grid-small > .grid__item {
+  padding-left: 16px;
+}
+.grid-xsmall > .grid__item {
+  padding-left: 8px;
+}
+.grid-spacer > .grid__item {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 769px) {
+  .grid-spacer > .grid__item {
+    margin-bottom: 16px;
+  }
+}
+.grid-spacer.grid-small > .grid__item {
+  margin-bottom: 16px;
+}
+.grid-spacer.grid-xsmall > .grid__item {
+  margin-bottom: 8px;
+}
+.grid__item[class*=push--] {
+  position: relative;
+}
 
 /* start-dbtfy-pricing-table */
 .dbtfy-pricing_table .pt-pricing-plans.pt-button-position-bottom .pt-plan-details {
