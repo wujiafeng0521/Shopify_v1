@@ -14338,7 +14338,7 @@ fieldset:disabled .btn {
 .wrapper-full .media-wrapper {
   border-radius: 0;
 }
-.media {
+/* .media {
   display: block;
   position: absolute;
   width: 100%;
@@ -14346,7 +14346,7 @@ fieldset:disabled .btn {
   bottom: 0;
   left: 0;
   right: 0;
-}
+}*/
 .wrapper-full .media {
   border-radius: 0;
 }
