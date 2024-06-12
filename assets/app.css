@@ -545,10 +545,10 @@ figure {
     margin: 0 0 1rem
 }
 
-img,
+/* img,
 svg {
     vertical-align: middle
-}
+}*/
 
 table {
     border-collapse: collapse;
