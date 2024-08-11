@@ -327,17 +327,7 @@
         "play_model": "Play 3D Viewer",
         "play_video": "Play video"
       },
-      "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
-        "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}",
-        "minimum_of": "Minimum of {{ quantity }}",
-        "maximum_of": "Maximum of {{ quantity }}",
-        "multiples_of": "Increments of {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart",
-        "note": "View quantity rules"
-      },
+      "quantity": "Quantity",
       "volume_pricing": {
         "title": "Volume Pricing",
         "note": "Volume pricing available",
