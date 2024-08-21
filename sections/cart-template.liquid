@@ -128,7 +128,7 @@
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 {% endif %}
-                <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
+                {% comment %}<p>{{ 'cart.general.shipping_at_checkout' | t }}</p>{% endcomment %}
                 <input type="button" @click="updateCart" name="update" class="btn btn-success" value="{{ 'cart.general.update' | t }}">
                 <input type="submit" name="checkout" class="btn btn-primary" class="button" value="{{ 'cart.general.checkout' | t }}">
 
