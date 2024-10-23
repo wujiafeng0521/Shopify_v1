@@ -171,6 +171,12 @@
         "settings": {
           "templateId": "hMWJR7AaPj"
         }
+      },
+      "a79b35b9-b2b2-4392-b5ce-a88dfef57386": {
+        "type": "shopify://apps/boost-ai-search-discovery/blocks/instant-search-app-embedded/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
