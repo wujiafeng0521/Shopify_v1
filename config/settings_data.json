@@ -1,7 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "navigation_image": "shopify:\/\/shop_images\/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
-    "logo": "shopify:\/\/shop_images\/trust-delivery.png",
+    "navigation_image": "shopify://shop_images/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
+    "logo": "shopify://shop_images/trust-delivery.png",
     "logo_width": 70,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -99,8 +108,8 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
-    "brand_image": "shopify:\/\/shop_images\/trust-student.png",
+    "brand_description": "<p></p>",
+    "brand_image": "shopify://shop_images/trust-student.png",
     "brand_image_width": 100,
     "social_facebook_link": "a's'd's",
     "social_instagram_link": "",
@@ -145,15 +154,22 @@
     ],
     "blocks": {
       "8857984110089213392": {
-        "type": "shopify:\/\/apps\/hextom-ultimate-sales-boost\/blocks\/usb-embeded-block\/00e81c42-8ae7-4b0b-b43d-99393b885fc4",
+        "type": "shopify://apps/hextom-ultimate-sales-boost/blocks/usb-embeded-block/00e81c42-8ae7-4b0b-b43d-99393b885fc4",
         "disabled": true,
         "settings": {
         }
       },
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": true,
         "settings": {
+        }
+      },
+      "fb2c587c-94a4-4248-853b-08434680e31a": {
+        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+          "templateId": "hMWJR7AaPj"
         }
       }
     },
@@ -382,7 +398,7 @@
       "sale_badge_color_scheme": "accent-2",
       "sold_out_badge_color_scheme": "inverse",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
