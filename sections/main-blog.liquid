@@ -2,7 +2,7 @@
 {{ blog.handle }}
 {{ blog.title }}
 
-{% paginate blog.articles %}
+{% paginate blog.articles by nil %}
   {% for article in blog.articles %}
     {{ article.image | image_url: 'medium' | image_tag }}
     <h1>{{ article.title }}</h1>
@@ -116,3 +116,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% paginate blog.articles %}"
+  to: "{% paginate blog.articles by nil %}"
+  position: 62..97
+{% endcomment %}
